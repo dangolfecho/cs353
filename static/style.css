@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse; /* This ensures that adjacent borders merge into a single border */
+    width: auto; /* Adjust width as needed */
+}
+
+table, th, td {
+    border: 1px solid black; /* Set border to solid 1px black */
+    padding: 8px; /* Adjust padding as needed */
+}
+
+/* Optional: Style table header */
+th {
+    background-color: #f2f2f2; /* Add background color for header cells */
+    text-align: left; /* Align text to the left within header cells */
+}

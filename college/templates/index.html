@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Exercise 6 - 211111
+    </title>
+    </head>
+    <body>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <table>
+            {% if courses %}
+            <h1>List of Courses</h1>
+                <table>
+                    <theader>
+                        <td>Course Code</td>
+                        <td>Course Name</td>
+                        <td>Department Id</td>
+                        <td>Credits</td>
+                        <td>Course Type</td>
+                    </theader>
+                    {% for course in courses %}
+                    <tr>
+                        <td>{{ course.course_id }}</td>
+                        <td>{{ course.title }}</td>
+                        <td>{{ course.dept_id }}</td>
+                        <td>{{ course.credits }}</td>
+                        <td>{{ course.type }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <h2>No courses to display!</h2>
+            {% endif %}
+        </table>
+    </body>
+</html>
